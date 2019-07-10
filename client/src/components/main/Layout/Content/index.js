@@ -49,11 +49,11 @@ class Content extends Component {
       <div className='wrapper'>
         <nav id='sidebar'>
           <div className="sidebar-header">
-              <h3>Bootstrap Sidebar</h3>
+              <h3 className='sidebar-title-heading'>EOS COLAB</h3>
           </div>
 
           <div className="list-unstyled li-padding components">
-             <p>Dummy Heading</p>
+             <p className='sidebar-menu-heading'>MENU</p>
              <div className='sidebar-nav-button' value='home' onClick={() => this.props.setCurrentContent("overview")}>
                Home
              </div>

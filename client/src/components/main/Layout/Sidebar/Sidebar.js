@@ -12,11 +12,11 @@ class Sidebar extends Component {
       <div className="wrapper">
          <nav id="sidebar">
              <div className="sidebar-header">
-                 <h3>Bootstrap Sidebar</h3>
+                 <h3>EOS CoLab</h3>
              </div>
 
              <div className="list-unstyled li-padding components">
-                <p>Dummy Heading</p>
+                <p>MENU</p>
                 <div className='sidebar-nav-button' value='home' onClick={() => this.props.setCurrentContent("home")}>
                   Home
                 </div>
