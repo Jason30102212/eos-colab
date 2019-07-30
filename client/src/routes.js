@@ -8,6 +8,7 @@ import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
+import Home from "views/Home/Home.jsx";
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import MyProfile from "views/MyProfile/MyProfile";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
@@ -21,6 +22,13 @@ import MyProjects from "views/MyProjects/MyProjects.jsx";
 import Store from "views/Store/Store.jsx";
 
 const dashboardRoutes = [
+  {
+    path: "/home",
+    name: "Home",
+    icon: Dashboard,
+    component: Home,
+    layout: "/admin"
+  },
   {
     path: "/dashboard",
     name: "Dashboard",
