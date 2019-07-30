@@ -17,12 +17,14 @@ import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.jsx";
 import sidebarStyle from "assets/jss/material-dashboard-react/components/sidebarStyle.jsx";
 
 const Sidebar = ({...props}) => {
+
   // verify if routeName iss the one active (in browser input)
   function activeRoute(routeName) {
     return props.location.pathname.indexOf(routeName) > -1 ? true : false;
   }
+
   const { classes, color, logo, image, logoText, routes  } = props;
-  console.log("Routes: ", routes);
+
   var links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
@@ -72,7 +74,6 @@ const Sidebar = ({...props}) => {
                       </ListItem>
           </NavLink>
         )
-
       })}
     </List>
   );

@@ -22,7 +22,7 @@ class Home extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.scatter.isScatterActivated) {
-      this.props.history.push('/interface');
+      this.props.history.push('/admin');
     }
   }
 

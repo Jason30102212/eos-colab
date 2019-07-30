@@ -48,9 +48,54 @@ class Dashboard extends Component {
     }
   }
 
+  handleImageClick = image => {
+    this.setState({ image: image });
+  }
+
+  handleColorClick = color => {
+    this.setState({ color: color });
+  }
+
+  handleFixedClick = () => {
+    if (this.state.fixedClasses === "dropdown") {
+      this.setState({ fixedClasses: "dropdown show" });
+    } else {
+      this.setState({ fixedClasses: "dropdown" });
+    }
+  };
+
+  handleDrawerToggle = () => {
+    this.setState({ mobileOpen: !this.state.mobileOpen });
+  }
 
   getRoute() {
     return this.props.location.pathname !== "/admin/maps";
+  }
+
+  resizeFunction = () => {
+    if (window.innerWidth >= 960) {
+      this.setState({ mobileOpen: false });
+    }
+  };
+
+  componentDidMount() {
+    if (navigator.platform.indexOf("win") > -1) {
+      const ps = new PerfectScrollbar(this.refs.mainPanel);
+    }
+    window.addEventListener("resize", this.resizeFunction);
+  }
+
+  componentDidUpdate(e) {
+    if (e.history.location.pathname !== e.location.pathname) {
+      this.refs.mainPanel.scrollTop = 0;
+      if(this.state.mobileOpen) {
+        this.setState({ mobileOpen: false });
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resizeFunction);
   }
 
   render() {
