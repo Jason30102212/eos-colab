@@ -6,7 +6,6 @@ import store from './store';
 
 import Home from './components/main/Home';
 import Admin from "layouts/Admin.jsx";
-import Interface from './components/main/Interface';
 
 import './App.css';
 
@@ -18,7 +17,6 @@ class App extends Component {
           <div>
             <Route path="/admin" component={Admin} />
             <Route exact path="/" component={Home} />
-            <Route exact path="/interface" component={Interface} />
           </div>
         </Router>
       </Provider>
