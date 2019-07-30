@@ -18,7 +18,6 @@ class App extends Component {
           <div>
             <Route path="/admin" component={Admin} />
             <Route exact path="/" component={Home} />
-            <Route exact path="/interface" component={Interface} />
           </div>
         </Router>
       </Provider>
