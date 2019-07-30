@@ -16,13 +16,13 @@ class Home extends Component {
 
   componentDidMount() {
     if(this.props.scatter.isScatterActivated){
-      this.props.history.push('/interface');
+      this.props.history.push('/admin');
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.scatter.isScatterActivated) {
-      this.props.history.push('/interface');
+      this.props.history.push('/admin');
     }
   }
 
