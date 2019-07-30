@@ -6,7 +6,6 @@ import store from './store';
 
 import Home from './components/main/Home';
 import Admin from "layouts/Admin.jsx";
-import Interface from './components/main/Interface';
 
 import './App.css';
 
